@@ -1,5 +1,7 @@
 <!-- badges: start -->
 [![R-CMD-check](https://github.com/AgrDataSci/ag5Tools/workflows/R-CMD-check/badge.svg)](https://github.com/AgrDataSci/ag5Tools/actions)
+[![CRAN](https://www.r-pkg.org/badges/version/ag5Tools)](https://cran.r-project.org/package=ag5Tools)
+[![Downloads](https://cranlogs.r-pkg.org/badges/grand-total/ag5Tools)](https://cran.r-project.org/package=ag5Tools)
 [![Contributor Covenant](https://img.shields.io/badge/Contributor%20Covenant-2.1-4baaaa.svg)](https://agrdatasci.github.io/ag5Tools/CODE_OF_CONDUCT.html)
  <!-- badges: end -->
 
@@ -15,25 +17,34 @@ The R package *ag5Tools* is a toolbox to download and extract data from the "Agr
 
 The download function provides programmatic access to the Copernicus Climate Data Store to download AgERA5 data.
 
+A detailed description can be found in the companion paper: https://doi.org/10.1016/j.softx.2022.101267
+
 ## Data license
 
-The ag5Tools package does not distribute data, it only provides access to Climate Data Store through the python cdsapi.
+The *ag5Tools* package does not distribute data, it only provides access to Climate Data Store through the python cdsapi.
 
 For specific details about the license agreement on downloading and using the data please check the license at: <https://cds.climate.copernicus.eu/api/v2/terms/static/licence-to-use-copernicus-products.pdf>
 
 ### Installation
-
+The stable version of *ag5Tools* can be installed from **CRAN** using 
+```r
+install.packages("ag5Tools")
+```  
+The development version could be installed using
 ``` r
 devtools::install_github("agrdatasci/ag5Tools", build_vignettes = TRUE)
 ```
 
 ### Downloading AgERA5 data
 
+#### Install Python and the CDS API
+Before using the *ag5Tools* package, you need to intall Python and the CDS API, please see the details here: https://cds.climate.copernicus.eu/api-how-to.
+
 #### Get your CDS API-Key
 
 To download AgERA5 data you should first register at the Climate Data Store and get your API key. Please follow the instructions in: <https://cds.climate.copernicus.eu/api-how-to>
 
-You only need to create a file to store the API key, following the instructions from: <https://cds.climate.copernicus.eu/api-how-to>. ag5Tools internally handles all the environment setup, including the Python requirements (i.e., install Python and cdsapi).
+You need to create a file to store the API key, following the instructions from: <https://cds.climate.copernicus.eu/api-how-to>. 
 
 #### Examples
 
@@ -65,11 +76,11 @@ ag5_extract(coords = c(35.726364, -2.197162),
 
 ## Acknowledgements
 
-The ag5Tools package relies on the functionality available from other open source packages.
+The *ag5Tools* package relies on the functionality available from other open source packages.
 
 -   The Python [*cdsapi*](https://pypi.org/project/cdsapi/)
 
--   The R package [*reticulate*](https://cran.r-project.org/package=reticulate) is used to access the Python cdsapi functions from R.
+-   The R package [*reticulate*](https://cran.r-project.org/package=reticulate) is used to access the Python CDS API functions from R.
 
 -   The R package [*terra*](https://cran.r-project.org/package=terra) is used to extract data from nc files.
 
@@ -77,9 +88,14 @@ The ag5Tools package relies on the functionality available from other open sourc
 
 ## License
 
-Please be aware that ag5Tools is released under MIT license, please find details in the [MIT license document](https://agrdatasci.github.io/ag5Tools/LICENSE.html)
+Please be aware that *ag5Tools* is released under MIT license, please find details in the [MIT license document](https://agrdatasci.github.io/ag5Tools/LICENSE.html)
+
+## Citation
+To cite the *ag5Tools* in scientific publications please use:  
+
+Brown, D., de Sousa, K., & van Etten, J. (2023). ag5Tools: An R package for downloading and extracting agrometeorological data from the AgERA5 database. SoftwareX, 21, 101267. https://doi.org/10.1016/j.softx.2022.101267 
 
 ## Code of Conduct
 
-Please note that the ag5Tools project is released with a [Contributor Code of Conduct](https://agrdatasci.github.io/ag5Tools/CODE_OF_CONDUCT.html). By contributing to this project, you agree to abide by its terms.
+Please note that the *ag5Tools* project is released with a [Contributor Code of Conduct](https://agrdatasci.github.io/ag5Tools/CODE_OF_CONDUCT.html). By contributing to this project, you agree to abide by its terms.
 

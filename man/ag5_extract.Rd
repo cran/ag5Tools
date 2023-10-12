@@ -4,7 +4,7 @@
 \alias{ag5_extract}
 \alias{ag5_extract.numeric}
 \alias{ag5_extract.data.frame}
-\title{Extract AgERA5 data stored in a local hardrive}
+\title{Extract AgERA5 data stored in a local hard drive}
 \usage{
 ag5_extract(coords, ..., path)
 
@@ -15,6 +15,7 @@ ag5_extract(coords, ..., path)
   statistic = NULL,
   time = NULL,
   celsius = FALSE,
+  parallel = TRUE,
   ...,
   path
 )
@@ -29,6 +30,7 @@ ag5_extract(coords, ..., path)
   statistic = NULL,
   time = NULL,
   celsius = FALSE,
+  ncores = NULL,
   ...,
   path
 )
@@ -50,8 +52,9 @@ or the column name in the case of \code{data.frame}}
 
 \item{time}{Only for variable Relative-Humidity-2m, see details for valid options}
 
-\item{celsius}{logical Only for variables "Temperature-Air-2m" and "2m_dewpoint_temperature".
-If \code{TRUE} the values are converted from Kelvin to Celsius. Default is \code{FALSE}}
+\item{celsius}{logical Only for variables "Temperature-Air-2m" and "2m_dewpoint_temperature".}
+
+\item{parallel}{logical Use parallel computation to speed-up data processing}
 
 \item{lon}{\code{character} Column name of longitude values in the case of \code{data.frame}}
 
@@ -60,6 +63,9 @@ If \code{TRUE} the values are converted from Kelvin to Celsius. Default is \code
 \item{start_date}{\code{character} Column name of start_date values in the case that coords is a \code{data.frame}}
 
 \item{end_date}{\code{character} Column name of end_date values in the case that coords is a \code{data.frame}}
+
+\item{ncores}{Number of cores to use with parallel. If NULL and parallel is ON, half the available cores will be used.
+If \code{TRUE} the values are converted from Kelvin to Celsius. Default is \code{FALSE}}
 }
 \value{
 \code{numeric} vector with length equal to the number of dates between first and
@@ -97,7 +103,7 @@ and location, where the first dates value is the start date and the second the e
 \itemize{
 \item Max-24h
 \item Mean-24h
-\item 24_hour_minimum
+\item Min-24h
 \item Max-Day-Time
 \item Mean-Day-Time
 \item Mean-Night-Time
