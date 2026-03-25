@@ -1,3 +1,7 @@
+# ag5Tools 0.0.3
+- Add "area" parameter to ag5_download
+- Fix problem with variable names and statistics
+
 # ag5Tools 0.0.2
 
 ## Major changes

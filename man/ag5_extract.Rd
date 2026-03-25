@@ -84,52 +84,52 @@ and location, where the first dates value is the start date and the second the e
 }
 \section{Valid variable values}{
 \itemize{
-\item "cloud_cover"
-\item "liquid_precipitation_duration_fraction"
-\item "snow_thickness_lwe"
+\item "Cloud-Cover"
+\item "Precipitation-Rain-Duration-Fraction"
+\item "Snow-Thickness-LWE"
 \item "Solar-Radiation-Flux"
 \item "Temperature-Air-2m"
-\item "2m_dewpoint_temperature"
+\item "Dew-Point_Temperature-2m"
 \item "Precipitation-Flux"
-\item "solid_precipitation_duration_fraction"
-\item "snow_thickness"
-\item "vapour_pressure"
-\item "10m_wind_speed"
+\item "Precipitation-Solid-Duration-Fraction"
+\item "Snow-Thickness"
+\item "Vapour-Pressure"
+\item "Wind-Speed-10m"
 \item "Relative-Humidity-2m"
 }
 }
 
 \section{Valid statistics for variable "Temperature-Air-2m"}{
 \itemize{
-\item Max-24h
-\item Mean-24h
-\item Min-24h
-\item Max-Day-Time
-\item Mean-Day-Time
-\item Mean-Night-Time
-\item Min-Night-Time}
+\item "Max-24h"
+\item "Mean-24h"
+\item "Min-24h"
+\item "Max-Day-Time"
+\item "Mean-Day-Time"
+\item "Mean-Night-Time"
+\item "Min-Night-Time"}
 }
 
 \section{Variables that require statistic}{
-For the following variables, only "24_hour_mean" statistic is available,
-but should be explicitly indicated.
+For the following variables, only 24 hour mean statistic is available,
+but should be explicitly indicated as "Mean".
 \itemize{
-\item cloud_cover
-\item snow_thickness_lwe
-\item 2m_dewpoint_temperature
-\item snow_thickness
-\item vapour_pressure
-\item 10m_wind_speed
+\item "Cloud-Cover"
+\item "Snow-Thickness-LWE"
+\item "Dew-Point_Temperature-2m"
+\item "Snow-Thickness"
+\item "Vapour-Pressure"
+\item "Wind-Speed-10m"
 }
 }
 
 \section{Valid time values for variable "Relative-Humidity-2m"}{
 \itemize{
-\item 06h
-\item 09h
-\item 12h
-\item 15h
-\item 18h
+\item "06h"
+\item "09h"
+\item "12h"
+\item "15h"
+\item "18h"
 }
 }
 
